@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  db:
+    container_name: "jdbc_db"
+    image: "postgres:15.4-alpine"
+    environment:
+      - 'POSTGRES_DB=jdbc_db'
+      - 'POSTGRES_PASSWORD=password'
+      - 'POSTGRES_USER=root'
+      - 'TZ=Africa/Lagos'
+    ports:
+      - '5432:5432'
